@@ -3,6 +3,10 @@
 # for each space represented as rows. Name your file 'retail_space.csv.
 
 
+
+
+
+
 '''
 Your final output should look like:
 
@@ -47,3 +51,12 @@ datastore = { "medical":[
 
       ]
 }
+
+
+outfile = open('retail_space2.csv','w')
+outfile.write('room-number,use,sq-ft,price\n')
+
+for x in datastore['medical']:
+  outfile.write(str(x['room-number'])+','+x['use']+','+str(x['sq-ft'])+','+str(x['price'])+'\n')
+
+outfile.close()
